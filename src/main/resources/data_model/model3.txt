@@ -1,0 +1,55 @@
+Sure, I can provide more details on the schema for a super shop management system with additional fields.
+
+Here is an example of an expanded schema for a super shop management system:
+
+Customer table:
+customer_id (int, primary key)
+first_name (varchar)
+last_name (varchar)
+email (varchar)
+phone_number (varchar)
+address (varchar)
+city (varchar)
+state (varchar)
+zip_code (varchar)
+Product table:
+product_id (int, primary key)
+name (varchar)
+description (varchar)
+category_id (int, foreign key)
+supplier_id (int, foreign key)
+cost_price (decimal)
+sale_price (decimal)
+quantity_in_stock (int)
+Category table:
+category_id (int, primary key)
+name (varchar)
+Supplier table:
+supplier_id (int, primary key)
+name (varchar)
+email (varchar)
+phone_number (varchar)
+address (varchar)
+city (varchar)
+state (varchar)
+zip_code (varchar)
+Sale table:
+sale_id (int, primary key)
+customer_id (int, foreign key)
+sale_date (datetime)
+total_amount (decimal)
+payment_type (varchar)
+Sale_details table:
+sale_detail_id (int, primary key)
+sale_id (int, foreign key)
+product_id (int, foreign key)
+quantity_sold (int)
+unit_price (decimal)
+User table:
+user_id (int, primary key)
+username (varchar)
+password (varchar)
+role (varchar)
+In this expanded schema, the Customer table includes additional fields such as email, city, state, and zip code. The Product table includes a description field, a category ID field that references the Category table, a cost price field, and a sale price field. The Supplier table includes email, city, state, and zip code fields. The Sale table includes a payment type field to indicate the type of payment used for the sale.
+
+With this expanded schema, the system can manage more detailed information about customers, products, and suppliers, which can help with marketing, inventory management, and supplier relationships. The system can also track payment types used for sales and associate products with specific categories.

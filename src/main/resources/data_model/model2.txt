@@ -1,0 +1,39 @@
+Sure, I can provide more details on the schema for a super shop management system.
+
+Here is an example of a schema for a super shop management system:
+
+Customer table:
+customer_id (int, primary key)
+name (varchar)
+phone_number (varchar)
+address (varchar)
+Product table:
+product_id (int, primary key)
+name (varchar)
+price (decimal)
+quantity (int)
+supplier_id (int, foreign key)
+Supplier table:
+supplier_id (int, primary key)
+name (varchar)
+phone_number (varchar)
+address (varchar)
+Sale table:
+sale_id (int, primary key)
+customer_id (int, foreign key)
+sale_date (datetime)
+total_amount (decimal)
+Sale_details table:
+sale_detail_id (int, primary key)
+sale_id (int, foreign key)
+product_id (int, foreign key)
+quantity (int)
+unit_price (decimal)
+User table:
+user_id (int, primary key)
+username (varchar)
+password (varchar)
+role (varchar)
+In this schema, each table has a primary key column, which uniquely identifies each record. The foreign key column in each table establishes a relationship with another table by referencing the primary key column of that table.
+
+The Customer table stores customer information such as name, phone number, and address. The Product table stores product information such as name, price, quantity, and supplier ID. The Supplier table stores supplier information such as name, phone number, and address. The Sale table stores sale information such as sale date, total amount, and customer ID. The Sale_details table stores details about each sale such as the product ID, quantity, and unit price. Finally, the User table stores user information such as username, password, and role (e.g., administrator, cashier).

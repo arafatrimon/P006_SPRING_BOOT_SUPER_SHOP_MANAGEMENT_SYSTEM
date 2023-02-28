@@ -1,0 +1,71 @@
+Sure, I can provide an even more detailed schema for a super shop management system with additional fields.
+
+Here is an example of an expanded schema for a super shop management system with more fields:
+
+Customer table:
+customer_id (int, primary key)
+first_name (varchar)
+last_name (varchar)
+email (varchar)
+phone_number (varchar)
+address_line_1 (varchar)
+address_line_2 (varchar)
+city (varchar)
+state (varchar)
+zip_code (varchar)
+country (varchar)
+loyalty_points (int)
+Product table:
+product_id (int, primary key)
+name (varchar)
+description (varchar)
+category_id (int, foreign key)
+supplier_id (int, foreign key)
+cost_price (decimal)
+sale_price (decimal)
+quantity_in_stock (int)
+reorder_level (int)
+reorder_quantity (int)
+image_url (varchar)
+Category table:
+category_id (int, primary key)
+name (varchar)
+description (varchar)
+Supplier table:
+supplier_id (int, primary key)
+name (varchar)
+email (varchar)
+phone_number (varchar)
+address_line_1 (varchar)
+address_line_2 (varchar)
+city (varchar)
+state (varchar)
+zip_code (varchar)
+country (varchar)
+Sale table:
+sale_id (int, primary key)
+customer_id (int, foreign key)
+sale_date (datetime)
+total_amount (decimal)
+payment_type (varchar)
+discount_amount (decimal)
+tax_amount (decimal)
+Sale_details table:
+sale_detail_id (int, primary key)
+sale_id (int, foreign key)
+product_id (int, foreign key)
+quantity_sold (int)
+unit_price (decimal)
+discount_percentage (decimal)
+User table:
+user_id (int, primary key)
+username (varchar)
+password (varchar)
+role (varchar)
+first_name (varchar)
+last_name (varchar)
+email (varchar)
+phone_number (varchar)
+In this expanded schema, the Customer table includes additional fields such as address line 1, address line 2, country, and loyalty points. The Product table includes a reorder level, reorder quantity, and image URL field. The Category table includes a description field. The Supplier table includes address line 1, address line 2, and country fields. The Sale table includes a discount amount and tax amount field to track discounts and taxes associated with the sale. The Sale_details table includes a discount percentage field to track any discounts applied to the sale of a particular product. The User table includes additional fields such as first name, last name, email, and phone number.
+
+With this expanded schema, the system can manage even more detailed information about customers, products, suppliers, and users, which can help with inventory management, supplier relationships, customer loyalty programs, and user management. The system can also track discounts and taxes associated with sales and apply discounts to individual products.
